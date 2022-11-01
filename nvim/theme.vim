@@ -1,10 +1,14 @@
+set background=dark
+
 if (has("termguicolrs"))
     set termguicolors
 endif
 
-let g:material_terminal_italics = 0
-let g:material_theme_style = "palenight"
-colorscheme material
+"let g:material_terminal_italics = 0
+"let g:material_theme_style = "palenight"
+"colorscheme material
+
+colorscheme seoul256
 
 " Airline
 let g:airline_powerline_fonts = 1
@@ -14,6 +18,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extentions#tabline#enabled = 1
 let airline#extensions#ale#error_symbol = 'E:'
 let airline#extensions#ale#warning_symbol = 'W:'
+let g:airline_theme='onedark'
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
