@@ -9,6 +9,7 @@ call plug#begin(stdpath('data') . '/plugged')
  Plug 'kaicataldo/material.vim', { 'branch': 'main' }
  Plug 'vim-airline/vim-airline'
  Plug 'vim-airline/vim-airline-themes'
+ Plug 'bling/vim-bufferline'
  Plug 'kien/rainbow_parentheses.vim'
  Plug 'scrooloose/nerdcommenter'
  Plug 'junegunn/seoul256.vim'
