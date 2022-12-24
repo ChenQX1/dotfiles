@@ -1,6 +1,5 @@
 " Basic settings
 source ~/.config/nvim/options.vim
-nnoremap <leader>sv :source $VIMRC<CR>
 
 " Plugin
 call plug#begin(stdpath('data') . '/plugged')
@@ -13,11 +12,17 @@ call plug#begin(stdpath('data') . '/plugged')
  Plug 'kien/rainbow_parentheses.vim'
  Plug 'scrooloose/nerdcommenter'
  Plug 'junegunn/seoul256.vim'
- Plug 'sainnhe/sonokai'
  Plug 'davidgranstrom/nvim-markdown-preview'
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
  Plug 'Raimondi/delimitMate'
+ Plug 'voldikss/vim-floaterm'
 call plug#end()
+
+let g:floaterm_keymap_new = '<leader>t'
+let g:floaterm_keymap_toggle = '<leader>tt'
+let g:floaterm_keymap_kill = '<leader>kt'
+let g:floaterm_width = 0.8
+let g:floaterm_height = 0.9
 
 source ~/.config/nvim/theme.vim
 source ~/.config/nvim/coc.vim
