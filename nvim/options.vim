@@ -15,7 +15,13 @@ set wildmode=longest,list   " get bash-like tab completions
 set cc=100                 " set an 100 column border for good coding style
 filetype plugin indent on   "allow auto-indenting depending on file type
 set mouse=a                 " enable mouse click
-set clipboard=unnamedplus   " using system clipboard
+" Clipboard settings
+set clipboard+=unnamedplus   " using system clipboard
+nnoremap dd "_dd
+xnoremap dd "_dd
+nnoremap dw "_dw
+xnoremap dw "_dw
+
 filetype plugin on
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
@@ -36,7 +42,6 @@ set smartindent
 set backspace=indent,eol,start
 set cmdheight=2
 set laststatus=2
-" set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%)
 set foldenable
 set foldmethod=syntax
 set foldcolumn=0
@@ -51,8 +56,6 @@ set updatetime=100
 syntax on
 syntax enable                   " syntax highlighting
 
-let mapleader=","
-
 " Vim jumps to the last position when reopening the file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -66,3 +69,11 @@ endif
 :vnoremap jk <Esc>
 :vnoremap kj <Esc>
 
+lua << EOF
+vim.g.completeopt = "menu,menuone,noselect,noinsert"
+vim.wo.signcolumn = "yes"
+vim.o.list = true
+vim.o.listchars = "space:·"
+vim.o.timeoutlen = 500
+vim.o.showtabline = 2
+EOF
