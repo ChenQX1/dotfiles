@@ -46,6 +46,10 @@ set foldenable
 set foldmethod=syntax
 set foldcolumn=0
 setlocal foldlevel=1
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 " Some servers have issues with backup files, see #649.
 set nobackup
