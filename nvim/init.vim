@@ -9,6 +9,7 @@ call plug#begin(stdpath('data') . '/plugged')
  Plug 'nvim-tree/nvim-tree.lua'
  Plug 'junegunn/seoul256.vim'
  Plug 'sainnhe/everforest'
+ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
  Plug 'akinsho/bufferline.nvim'
  Plug 'moll/vim-bbye'
  Plug 'nvim-lualine/lualine.nvim'
