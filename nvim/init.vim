@@ -22,6 +22,7 @@ call plug#begin(stdpath('data') . '/plugged')
  Plug 'xiyaowong/nvim-transparent'
  Plug 'nvim-telescope/telescope.nvim'
  Plug 'nvim-lua/plenary.nvim'
+ Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
 
 source ~/.config/nvim/theme.vim
@@ -37,5 +38,6 @@ require('plugin-config.bufferline')
 require('plugin-config.lualine')
 require('plugin-config.telescope')
 require('plugin-config.nvim-treesitter')
+require('plugin-config.indent-blankline')
 
 EOF
