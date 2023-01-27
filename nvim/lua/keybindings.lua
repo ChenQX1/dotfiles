@@ -4,6 +4,8 @@ vim.g.maplocalleader = ','
 local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true}
 
+map('n', '<C-q>', ':q<CR>', opt)
+
 --- split windows
 map('n', 's', '', opt)
 map('n', 'sv', ':vsp<CR>', opt)
