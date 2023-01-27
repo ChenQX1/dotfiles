@@ -4,7 +4,7 @@ vim.g.maplocalleader = ','
 local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true}
 
-map('n', '<C-q>', ':q<CR>', opt)
+map('n', '<C-q>', ':wq<CR>', opt)
 
 --- split windows
 map('n', 's', '', opt)
@@ -17,6 +17,7 @@ map('n', 'sh', ':sp<CR>', opt)
 --map("n", "<C-j>", ":resize -2<CR>", opt)
 
 local pluginkeys = {}
+
 --- nvim-tree
 map('n', '<S-q>', ':NvimTreeToggle<CR>', opt)
 pluginkeys.nvimTreeList = {
@@ -61,5 +62,10 @@ pluginkeys.telescopeList = {
     ["<C-d>"] = "preview_scrolling_down",
   },
 }
+
+--- Flutter
+map("n", "<leader>fe", ":CocCommand flutter.emulators<CR>", opt)
+map("n", "<leader>fd", ":below new output:///flutter-dev<CR>", opt)
+map("n", "<leader>fr", ":CocCommand flutter.run<CR>", opt)
 
 return pluginkeys
