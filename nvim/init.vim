@@ -27,7 +27,6 @@ call plug#end()
 
 source ~/.config/nvim/theme.vim
 source ~/.config/nvim/plugins/coc.vim
-source ~/.config/nvim/plugins/markdown.vim
 source ~/.config/nvim/plugins/floaterm.vim
 
 lua << EOF

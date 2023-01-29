@@ -4,7 +4,8 @@ vim.g.maplocalleader = ','
 local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true}
 
-map('n', '<C-q>', ':wq<CR>', opt)
+map('n', '<C-q>', ':q<CR>', opt)
+map('n', '<C-s>', ':w<CR>', opt)
 
 --- split windows
 map('n', 's', '', opt)
@@ -67,5 +68,10 @@ pluginkeys.telescopeList = {
 map("n", "<leader>fe", ":CocCommand flutter.emulators<CR>", opt)
 map("n", "<leader>fd", ":below new output:///flutter-dev<CR>", opt)
 map("n", "<leader>fr", ":CocCommand flutter.run<CR>", opt)
+
+--- Markdown
+vim.g.nvim_markdown_preview_format = 'markdown'
+map("n", "<leader>md", ":MarkdownPreview<CR>", opt)
+
 
 return pluginkeys
