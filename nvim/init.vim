@@ -23,6 +23,7 @@ call plug#begin(stdpath('data') . '/plugged')
  Plug 'nvim-telescope/telescope.nvim'
  Plug 'nvim-lua/plenary.nvim'
  Plug 'lukas-reineke/indent-blankline.nvim'
+ Plug 'mhartington/formatter.nvim'
 call plug#end()
 
 source ~/.config/nvim/theme.vim
