@@ -27,7 +27,7 @@ call plug#begin(stdpath('data') . '/plugged')
 call plug#end()
 
 source ~/.config/nvim/theme.vim
-source ~/.config/nvim/plugins/coc.vim
+"source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/floaterm.vim
 
 lua << EOF
@@ -41,3 +41,5 @@ require('plugin-config.nvim-treesitter')
 require('plugin-config.indent-blankline')
 
 EOF
+
+source ~/.config/nvim/plugins/coc.vim
