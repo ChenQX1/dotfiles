@@ -41,15 +41,15 @@ map("n", "<leader>F", ":FormatWrite<CR>", opt)
 -- NvimTree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 pluginKeys.nvimTreeList = {
-	-- 打开文件或文件夹
+	-- Open a file
 	{ key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
-	-- 分屏打开文件
+	-- Open a file in a split window
 	{ key = "v", action = "vsplit" },
 	{ key = "h", action = "split" },
-	-- 显示隐藏文件
-	{ key = "i", action = "toggle_custom" }, -- 对应 filters 中的 custom (node_modules)
-	{ key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
-	-- 文件操作
+	-- Show filtered files
+	{ key = "i", action = "toggle_custom" },
+	{ key = ".", action = "toggle_dotfiles" },
+	-- Editor ops
 	{ key = "<F5>", action = "refresh" },
 	{ key = "a", action = "create" },
 	{ key = "d", action = "remove" },
@@ -69,5 +69,9 @@ map("n", "<C-w>w", ":Bdelete!<CR>", opt)
 --map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)      --- close the right tab
 --map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)     --- close the left tab
 --map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)     --- close the selected tab
+
+-- Telescope
+map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
 return pluginKeys

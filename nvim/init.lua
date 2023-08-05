@@ -1,0 +1,10 @@
+require("basic")
+require("keybindings")
+require("plugins")
+require("colorscheme")
+
+require("plugin-configs.formatter")
+require("plugin-configs.nvim-tree")
+require("plugin-configs.bufferline")
+require("plugin-configs.lualine")
+require("plugin-configs.nvim-treesitter")
