@@ -19,7 +19,6 @@ fmt.setup({
 			-- "formatter.filetypes.lua" defines default configurations for the
 			-- "lua" filetype
 			require("formatter.filetypes.lua").stylua,
-
 			-- You can also define your own configuration
 			function()
 				-- Supports conditional formatting
