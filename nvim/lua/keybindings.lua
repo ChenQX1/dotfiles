@@ -68,7 +68,7 @@ map("n", "<leader>f", ":Format<CR>", opt)
 map("n", "<leader>F", ":FormatWrite<CR>", opt)
 
 -- NvimTree
-map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
 pluginKeys.nvimTreeList = {
 	-- Open a file
 	{ key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
