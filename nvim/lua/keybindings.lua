@@ -94,7 +94,7 @@ pluginKeys.nvimTreeList = {
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 --- close tabs
-map("n", "<C-w>w", ":Bdelete!<CR>", opt)
+map("n", "<leader>w", ":Bdelete!<CR>", opt)
 --map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)      --- close the right tab
 --map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)     --- close the left tab
 --map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)     --- close the selected tab
