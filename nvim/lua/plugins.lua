@@ -24,6 +24,7 @@ packer.startup({
 		use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
 		use("numToStr/Comment.nvim")
 		use("lukas-reineke/indent-blankline.nvim")
+		use("voldikss/vim-floaterm")
 	end,
 	config = {
 		-- 并发数限制
