@@ -22,7 +22,7 @@ nvim_tree.setup({
 		custom = { "node_modules", "__pycache__" },
 	},
 	view = {
-		width = 40,
+		width = 30,
 		side = "left",
 		hide_root_folder = false,
 		mappings = {

@@ -79,14 +79,14 @@ pluginKeys.nvimTreeList = {
 	{ key = "i", action = "toggle_custom" },
 	{ key = ".", action = "toggle_dotfiles" },
 	-- Editor ops
-	{ key = "<F5>", action = "refresh" },
-	{ key = "a", action = "create" },
-	{ key = "d", action = "remove" },
-	{ key = "r", action = "rename" },
-	{ key = "x", action = "cut" },
-	{ key = "c", action = "copy" },
-	{ key = "p", action = "paste" },
-	{ key = "s", action = "system_open" },
+	{ key = "r", action = "refresh" },
+	{ key = "<leader>a", action = "create" },
+	{ key = "<leader>d", action = "remove" },
+	{ key = "<leader>rn", action = "rename" },
+	{ key = "<leader>x", action = "cut" },
+	{ key = "<leader>c", action = "copy" },
+	{ key = "<leader>p", action = "paste" },
+	{ key = "<leader>s", action = "system_open" },
 }
 
 --- bufferline
@@ -102,5 +102,22 @@ map("n", "<C-w>w", ":Bdelete!<CR>", opt)
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+pluginKeys.telescopeList = {
+	i = {
+		-- move vertically
+		--["<C-j>"] = "move_selection_next",
+		--["<C-k>"] = "move_selection_previous",
+		--["<Down>"] = "move_selection_next",
+		--["<Up>"] = "move_selection_previous",
+		-- history
+		["<C-n>"] = "cycle_history_next",
+		["<C-p>"] = "cycle_history_prev",
+		-- close the window
+		["<C-c>"] = "close",
+		-- sroll the preview window
+		["<C-u>"] = "preview_scrolling_up",
+		["<C-d>"] = "preview_scrolling_down",
+	},
+}
 
 return pluginKeys
