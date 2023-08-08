@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/qxchen/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  ["coc-fzf"] = {
+    loaded = true,
+    path = "/Users/qxchen/.local/share/nvim/site/pack/packer/start/coc-fzf",
+    url = "https://github.com/antoinemadec/coc-fzf"
+  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/Users/qxchen/.local/share/nvim/site/pack/packer/start/coc.nvim",
@@ -103,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/qxchen/.local/share/nvim/site/pack/packer/start/formatter.nvim",
     url = "https://github.com/mhartington/formatter.nvim"
+  },
+  fzf = {
+    loaded = true,
+    path = "/Users/qxchen/.local/share/nvim/site/pack/packer/start/fzf",
+    url = "https://github.com/junegunn/fzf"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,

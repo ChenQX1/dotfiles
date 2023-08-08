@@ -26,11 +26,17 @@ packer.startup({
 		use("lukas-reineke/indent-blankline.nvim")
 		use("voldikss/vim-floaterm")
 		use("preservim/nerdcommenter")
+		use({
+			"junegunn/fzf",
+			run = function()
+				vim.fn["fzf#install"]()
+			end,
+		})
+		use("antoinemadec/coc-fzf")
 	end,
 	config = {
-		-- 并发数限制
 		max_jobs = 16,
-		-- 自定义源
+		-- Github proxies
 		git = {
 			-- default_url_format = "https://hub.fastgit.xyz/%s",
 			-- default_url_format = "https://mirror.ghproxy.com/https://github.com/%s",

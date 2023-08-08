@@ -125,7 +125,7 @@ vim.g.floaterm_keymap_new = "<leader>tt"
 vim.g.floaterm_keymap_toggle = "<leader>t"
 vim.g.floaterm_keymap_kill = "<leader>kt"
 vim.g.floaterm_width = 0.7
-vim.g.floaterm_height = 0.6
+vim.g.floaterm_height = 0.7
 
 -- Nerdcommenter
 
