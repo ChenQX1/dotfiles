@@ -13,18 +13,18 @@ vim.wo.cursorline = true
 vim.wo.signcolumn = "yes"
 vim.opt.signcolumn = "yes"
 vim.wo.colorcolumn = "80"
--- 缩进4个空格等于一个Tab
+-- Set <Tab> = 4 <spaces>
 vim.o.tabstop = 4
 vim.bo.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftround = true
--- >> << 时移动长度
+-- >> << shift distance
 vim.o.shiftwidth = 4
 vim.bo.shiftwidth = 4
 -- Repalce <tab> by <space>
 -- vim.o.expandtab = true
 -- vim.bo.expandtab = true
-
+-- About indent
 vim.o.autoindent = true
 vim.bo.autoindent = true
 vim.o.smartindent = true
@@ -35,10 +35,10 @@ vim.o.smartcase = true
 vim.o.hlsearch = false
 vim.o.incsearch = true
 vim.o.cmdheight = 2
--- 当文件被外部程序修改时，自动加载
+-- Auto-reload file if it is changed
 vim.o.autoread = true
 vim.bo.autoread = true
--- Disable folder
+-- Disable fold
 vim.wo.wrap = false
 -- Use <Left><Right> to jump at both ends
 vim.o.whichwrap = "<,>,[,]"
@@ -50,10 +50,10 @@ vim.o.mouse = "a"
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
--- smaller updatetime
+-- Smaller updatetime
 vim.o.updatetime = 300
 vim.o.timeoutlen = 300
--- split window
+-- Split window
 vim.o.splitbelow = true
 vim.o.splitright = true
 -- Dont select for auto-completion
@@ -81,9 +81,12 @@ vim.o.showtabline = 2
 vim.o.showmode = false
 -- Enable the system clipboard
 vim.opt.clipboard:append("unnamedplus")
--- ensuring that special characters are treated as such in regular expressions.
+-- Ensure that special characters are treated as such in regular expressions.
 vim.o.magic = true
 vim.o.laststatus = 2
+-- Errors
+vim.o.errorbells = false
+vim.o.visualbell = false
 
 if vim.fn.has("autocmd") == 1 then
 	vim.cmd([[
