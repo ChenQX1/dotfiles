@@ -25,6 +25,7 @@ packer.startup({
 		use("numToStr/Comment.nvim")
 		use("lukas-reineke/indent-blankline.nvim")
 		use("voldikss/vim-floaterm")
+		use("preservim/nerdcommenter")
 	end,
 	config = {
 		-- 并发数限制
@@ -44,8 +45,8 @@ packer.startup({
 	},
 })
 
--- 每次保存 plugins.lua 自动安装插件
--- Call vim auto API
+-- Auto install/sync plugins
+-- upon saving plugins.lua
 pcall(
 	vim.cmd,
 	[[

@@ -127,4 +127,6 @@ vim.g.floaterm_keymap_kill = "<leader>kt"
 vim.g.floaterm_width = 0.7
 vim.g.floaterm_height = 0.6
 
+-- Nerdcommenter
+
 return pluginKeys
