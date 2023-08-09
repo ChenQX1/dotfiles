@@ -32,6 +32,7 @@ packer.startup({
 				vim.fn["fzf#install"]()
 			end,
 		})
+		--use({ "ibhagwan/fzf-lua", requires = { "nvim-tree/nvim-web-devicons" } })
 		use("antoinemadec/coc-fzf")
 	end,
 	config = {

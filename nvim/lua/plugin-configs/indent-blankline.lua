@@ -36,9 +36,9 @@ ident_blankline.setup({
 		"lspinfo",
 		"toggleterm",
 	},
-	char = "¦",
+	--char = "¦",
 	-- char = '┆'
 	-- char = '│'
 	-- char = "⎸",
-	-- char = "▏",
+	char = "▏",
 })
