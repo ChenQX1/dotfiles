@@ -5,34 +5,25 @@ packer.startup({
 		-- Plugin List
 		use("wbthomason/packer.nvim")
 		use({ "neoclide/coc.nvim", branch = "release" })
-		use("mhartington/formatter.nvim")
 		use("shaunsingh/nord.nvim")
 		use("sainnhe/everforest")
-		--use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+		use("mhartington/formatter.nvim")
 		use({ "nvim-tree/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } })
 		use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
 		use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
-		use({
-			"nvim-treesitter/nvim-treesitter",
-			run = function()
-				local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-				ts_update()
-			end,
-		})
-		use("nvim-lua/plenary.nvim")
-		use("Raimondi/delimitMate")
-		use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
-		use("numToStr/Comment.nvim")
-		use("lukas-reineke/indent-blankline.nvim")
-		use("voldikss/vim-floaterm")
-		use("preservim/nerdcommenter")
-		use({
-			"junegunn/fzf",
-			run = function()
-				vim.fn["fzf#install"]()
-			end,
-		})
-		--use({ "ibhagwan/fzf-lua", requires = { "nvim-tree/nvim-web-devicons" } })
+		--use({
+		--	"nvim-treesitter/nvim-treesitter",
+		--	run = function()
+		--		local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+		--		ts_update()
+		--	end,
+		--})
+		--use("Raimondi/delimitMate")
+		--use("numToStr/Comment.nvim")
+		--use({ "lukas-reineke/indent-blankline.nvim", main = "ibl" })
+		--use("voldikss/vim-floaterm")
+		--use("preservim/nerdcommenter")
+		use({ "ibhagwan/fzf-lua", requires = { "nvim-tree/nvim-web-devicons" } })
 		use("antoinemadec/coc-fzf")
 	end,
 	config = {
@@ -54,12 +45,13 @@ packer.startup({
 
 -- Auto install/sync plugins
 -- upon saving plugins.lua
-pcall(
-	vim.cmd,
-	[[
-    augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-    augroup end
-  ]]
-)
+
+--[[pcall(]]
+--[[vim.cmd,]]
+--[[[[]]
+--[[augroup packer_user_config]]
+--[[autocmd!]]
+--[[autocmd BufWritePost plugins.lua source <afile> | PackerSync]]
+--[[augroup end]]
+---[[]]]]
+--[[)]]

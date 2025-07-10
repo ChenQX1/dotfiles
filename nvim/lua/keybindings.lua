@@ -1,4 +1,4 @@
--- Fundamentals
+-- Basics
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 local pluginKeys = {}
@@ -62,39 +62,35 @@ end
 map("n", "K", "<CMD>lua _G.show_docs()<CR>", { silent = true })
 -- Symbol renaming
 map("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
-
 -- Formatter
 map("n", "<leader>f", ":Format<CR>", opt)
 map("n", "<leader>F", ":FormatWrite<CR>", opt)
 
--- NvimTree
-map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
+--- Nvim tree
+map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 pluginKeys.nvimTreeList = {
-	-- Open a file
+	-- open files or folders
 	{ key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
-	-- Open a file in a split window
+	-- split window
 	{ key = "v", action = "vsplit" },
 	{ key = "h", action = "split" },
-	-- Show filtered files
-	{ key = "i", action = "toggle_custom" },
-	{ key = ".", action = "toggle_dotfiles" },
-	-- Editor ops
-	{ key = "r", action = "refresh" },
-	{ key = "<leader>a", action = "create" },
-	{ key = "<leader>d", action = "remove" },
-	{ key = "<leader>rn", action = "rename" },
-	{ key = "<leader>x", action = "cut" },
-	{ key = "<leader>c", action = "copy" },
-	{ key = "<leader>p", action = "paste" },
-	{ key = "<leader>s", action = "system_open" },
+	-- file operations
+	{ key = "<F5>", action = "refresh" },
+	{ key = "a", action = "create" },
+	{ key = "d", action = "remove" },
+	{ key = "r", action = "rename" },
+	{ key = "x", action = "cut" },
+	{ key = "c", action = "copy" },
+	{ key = "p", action = "paste" },
+	{ key = "s", action = "system_open" },
 }
 
 --- bufferline
 --- Switch between tabs
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
---- close tabs
-map("n", "<leader>w", ":Bdelete!<CR>", opt)
+--- close tab
+map("n", "<A-w>", ":Bdelete!<CR>", opt)
 --map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)      --- close the right tab
 --map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)     --- close the left tab
 --map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)     --- close the selected tab
@@ -121,12 +117,10 @@ pluginKeys.telescopeList = {
 }
 
 -- Floaterm
-vim.g.floaterm_keymap_new = "<leader>tt"
+--vim.g.floaterm_keymap_new = "<leader>tt"
 vim.g.floaterm_keymap_toggle = "<leader>t"
 vim.g.floaterm_keymap_kill = "<leader>kt"
 vim.g.floaterm_width = 0.7
 vim.g.floaterm_height = 0.7
-
--- Nerdcommenter
 
 return pluginKeys

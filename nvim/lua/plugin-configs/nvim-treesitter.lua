@@ -18,6 +18,8 @@ treesitter.setup({
 		"c",
 		"cpp",
 		"python",
+		"rust",
+		"go",
 	},
 	sync_install = false,
 	auto_install = true,

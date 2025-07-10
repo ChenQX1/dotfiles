@@ -19,12 +19,12 @@ bufferline.setup({
 		offsets = {
 			{
 				filetype = "NvimTree",
-				text = "File Explorer",
+				text = "Explorer",
 				highlight = "Directory",
 				text_align = "left",
 			},
 		},
-		diagnostics = "nvim_lsp",
+		diagnostics = "coc", --- "nvim_lsp"
 		--- LSP diagnostics signs
 		diagnostics_indicator = function(count, level, diagnostics_dict, context)
 			local s = " "

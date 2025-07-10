@@ -1,0 +1,255 @@
+{
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontSize": 14,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "files.autoSave": "onFocusChange",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+    },
+    // c++
+    "C_Cpp.default.compilerPath": "/usr/bin/clang",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.autocompleteAddParentheses": true,
+    // python
+    "python.analysis.extraPaths": [
+        "{$PWD}"
+    ],
+    "python.linting.flake8Args": [
+        "--ignore=E402,E401",
+        "--max-line-length",
+        "88"
+    ],
+    "jupyter.pythonExportMethod": "nbconvert",
+    "jupyter.askForKernelRestart": false,
+    "jupyter.jupyterServerType": "local",
+    "python.autoComplete.extraPaths": [
+        "{$PWD}"
+    ],
+    "python.terminal.activateEnvironment": false,
+    "python.terminal.activateEnvInCurrentTerminal": false,
+    "python.terminal.executeInFileDir": false,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "python.analysis.completeFunctionParens": true,
+    "jupyter.debugJustMyCode": false,
+    "jupyter.showVariableViewWhenDebugging": true,
+    "python.analysis.indexing": true,
+    "python.analysis.exclude": [
+        "**/*.ipynb"
+    ],
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "notebook.output.textLineLimit": 40,
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "python.analysis.autoImportCompletions": true,
+    "jupyter.allowUnauthorizedRemoteConnection": true,
+    "notebook.output.scrolling": true,
+    // leetcode
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.filePath": {
+        "default": {
+            "folder": "",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "bash": {
+            "folder": "leetcode/bash",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "c": {
+            "folder": "leetcode/c",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "cpp": {
+            "folder": "leetcode/cpp",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "python3": {
+            "folder": "leetcode/python3",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "golang": {
+            "folder": "leetcode/golang",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "java": {
+            "folder": "leetcode/java",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "rust": {
+            "folder": "leetcode/rust",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "scala": {
+            "folder": "leetcode/scala",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "swift": {
+            "folder": "leetcode/swift",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+    },
+    "leetcode.hint.setDefaultLanguage": false,
+    "leetcode.showDescription": "Both",
+    "leetcode.hint.commentDescription": false,
+    "leetcode.hint.commandShortcut": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.startupEditor": "none",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": false,
+    "vscode-office.viewAbsoluteLocal": true,
+    "update.mode": "manual",
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off"
+    },
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "projectManager.any.baseFolders": [
+        "/Users/qxchen/Projects"
+    ],
+    "projectManager.any.ignoredFolders": [
+        "node_modules",
+        "out",
+        "typings",
+        "test",
+        ".*",
+        "__*",
+        "_*"
+    ],
+    "projectManager.any.maxDepthRecursion": 1,
+    "projectManager.git.ignoredFolders": [
+        "node_modules",
+        "out",
+        "typings",
+        "test",
+        ".haxelib",
+        ".DS_Store"
+    ],
+    "redhat.telemetry.enabled": false,
+    // vim
+    "vim.leader": ",",
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.smartRelativeLine": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "m"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["<leader>","r","n"],
+            "commands": ["editor.action.rename"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["p","d"],
+            "commands": ["editor.action.peekDefinition"]
+        },
+        {
+            "before": ["g","d"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        {
+            "before": ["g","i"],
+            "commands": ["editor.action.goToImplementation"]
+        },
+        {
+            "before": ["p","i"],
+            "commands": ["editor.action.peekImplementation"]
+        },
+        {
+            "before": ["g","r"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        {
+            "before": ["<C-o>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.navigateBack",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<C-i>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.navigateForward",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "cursorMove",
+                    "args": {
+                        "to": "down",
+                        "by": "line",
+                        "value": 5,
+                        "reveal.cursor": true
+                    }
+                }
+            ]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "cursorMove",
+                    "args": {
+                        "to": "up",
+                        "by": "line",
+                        "value": 5,
+                        "reveal.cursor": true
+                    }
+                }
+            ]
+        }
+    ],
+    "workbench.colorTheme": "Solarized Light",
+    "hediet.vscode-drawio.resizeImages": null,
+    "remote.SSH.connectTimeout": 1000,
+    "debug.console.closeOnEnd": true,
+    "editor.accessibilityPageSize": 500,
+    "editor.fontFamily": "Monaspace Argon, mono",
+    "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'liga'",
+    "editor.renderWhitespace": "boundary",
+    "editor.fontSize": 13
+}

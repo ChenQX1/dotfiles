@@ -1,6 +1,6 @@
-local status, ident_blankline = pcall(require, "indent_blankline")
+local status, ident_blankline = pcall(require, "indent-blankline")
 if not status then
-	vim.notify("no indent_blankline")
+	vim.notify("no ibl")
 	return
 end
 
