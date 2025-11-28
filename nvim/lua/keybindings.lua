@@ -8,7 +8,7 @@ local opts = { silent = true, noremap = true, expr = true, replace_keycodes = fa
 -- Editors
 map("n", "<C-q>", ":q<CR>", opt)
 map("n", "<C-s>", ":w<CR>", opt)
-map("n", "<leader>w", ":bdelete<CR>", opt)
+map("n", "<leader>w", ":Bdelete<CR>", opt)
 map("n", "<C-j>", "5j", opt)
 map("n", "<C-k>", "5k", opt)
 -- Move selected words
