@@ -67,25 +67,6 @@ map("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
 map("n", "<leader>f", ":Format<CR>", opt)
 map("n", "<leader>F", ":FormatWrite<CR>", opt)
 
---- Nvim tree
-map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
-pluginKeys.nvimTreeList = {
-	-- open files or folders
-	{ key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
-	-- split window
-	{ key = "v", action = "vsplit" },
-	{ key = "h", action = "split" },
-	-- file operations
-	{ key = "<F5>", action = "refresh" },
-	{ key = "a", action = "create" },
-	{ key = "d", action = "remove" },
-	{ key = "r", action = "rename" },
-	{ key = "x", action = "cut" },
-	{ key = "c", action = "copy" },
-	{ key = "p", action = "paste" },
-	{ key = "s", action = "system_open" },
-}
-
 --- bufferline
 --- Switch between tabs
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
@@ -95,5 +76,21 @@ map("n", "<A-w>", ":Bdelete!<CR>", opt)
 --map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)      --- close the right tab
 --map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)     --- close the left tab
 --map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)     --- close the selected tab
+--
+--
+--- flaoterm
+-- 1. Normal Mode
+-- If no terminal: Create new. If hidden: Show. If visible: Hide.
+vim.keymap.set("n", "<Leader>t", ":FloatermToggle<CR>", { noremap = true, silent = true })
+
+-- 2. Terminal Mode (<Leader>t)
+-- We must escape the terminal input mode first using <C-\><C-n>
+-- Then run the toggle command to hide the window.
+vim.keymap.set("t", "<Leader>t", "<C-\\><C-n>:FloatermToggle<CR>", { noremap = true, silent = true })
+-- Optional: Make the terminal float in the center and take up 80% of the screen
+vim.g.floaterm_width = 0.8
+vim.g.floaterm_height = 0.8
+vim.g.floaterm_wintype = "float"
+vim.g.floaterm_position = "center"
 
 return pluginKeys

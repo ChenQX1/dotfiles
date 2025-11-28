@@ -21,7 +21,7 @@ packer.startup({
 		--use("Raimondi/delimitMate")
 		--use("numToStr/Comment.nvim")
 		--use({ "lukas-reineke/indent-blankline.nvim", main = "ibl" })
-		--use("voldikss/vim-floaterm")
+		use("voldikss/vim-floaterm")
 		--use("preservim/nerdcommenter")
 		use({ "ibhagwan/fzf-lua", requires = { "nvim-tree/nvim-web-devicons" } })
 		use("antoinemadec/coc-fzf")
