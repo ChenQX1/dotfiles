@@ -12,15 +12,13 @@ packer.startup({
 		use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
 		use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
 		use({ "famiu/bufdelete.nvim" })
-		--use({
-		--	"nvim-treesitter/nvim-treesitter",
-		--	run = function()
-		--		local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-		--		ts_update()
-		--	end,
-		--})
-		--use("Raimondi/delimitMate")
-		--use("numToStr/Comment.nvim")
+		use({
+			"windwp/nvim-autopairs",
+			event = "InsertEnter",
+			config = function()
+				require("nvim-autopairs").setup({})
+			end,
+		})
 		--use({ "lukas-reineke/indent-blankline.nvim", main = "ibl" })
 		use("voldikss/vim-floaterm")
 		--use("preservim/nerdcommenter")
