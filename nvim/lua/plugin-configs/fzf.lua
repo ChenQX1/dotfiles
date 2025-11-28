@@ -4,23 +4,50 @@ if not status_ok then
 	return
 end
 
--- Optional: You can call setup if you want to override defaults later
--- fzf_lua.setup({})
--- Ensure 'opt' is defined as in your previous examples, e.g.:
--- local opt = { noremap = true, silent = true }
--- Or define options directly in the mapping.
+-- 1. SETUP: Configure the look and feel of the window
+fzf_lua.setup({
+	winopts = {
+		height = 0.85, -- Window height
+		width = 0.80, -- Window width
+		preview = {
+			layout = "horizontal", -- "horizontal" or "vertical"
+			scrollbar = "float",
+		},
+	},
+	keymap = {
+		-- These override the default internal FZF keys
+		builtin = {
+			-- Use Ctrl-j and Ctrl-k to move up and down inside the list
+			["<C-j>"] = "down",
+			["<C-k>"] = "up",
 
-vim.keymap.set("n", "<C-p>", function()
-	require("fzf-lua").files()
-end, { noremap = true, silent = true, desc = "FZF Find Files" })
+			-- Scroll the preview window
+			["<C-u>"] = "preview-page-up",
+			["<C-d>"] = "preview-page-down",
+		},
+		fzf = {
+			-- FZF native keybindings (optional)
+			["ctrl-z"] = "abort",
+		},
+	},
+})
 
--- For live grep (similar to Telescope live_grep)
-vim.keymap.set("n", "<C-f>", function()
-	require("fzf-lua").live_grep()
-end, { noremap = true, silent = true, desc = "FZF Live Grep" })
+-- 2. KEYMAPPINGS: Open the search windows
+-- We use vim.keymap.set which is the modern Lua way to set keys
+local map = vim.keymap.set
+local opts = { noremap = true, silent = true, desc = "FZF" }
 
--- Some other useful fzf-lua commands you might want to map:
--- vim.keymap.set("n", "<leader>fb", function() require('fzf-lua').buffers() end, { noremap = true, silent = true, desc = "FZF Buffers" })
--- vim.keymap.set("n", "<leader>fh", function() require('fzf-lua').help_tags() end, { noremap = true, silent = true, desc = "FZF Help Tags" })
--- vim.keymap.set("n", "<leader>fo", function() require('fzf-lua').oldfiles() end, { noremap = true, silent = true, desc = "FZF Old Files" })
--- vim.keymap.set("n", "<leader>fc", function() require('fzf-lua').commands() end, { noremap = true, silent = true, desc = "FZF Commands" })
+-- <C-p>: Find Files
+map("n", "<C-p>", function()
+	fzf_lua.files()
+end, { desc = "FZF Find Files" })
+
+-- <C-f>: Live Grep (Content Search)
+map("n", "<C-f>", function()
+	fzf_lua.live_grep()
+end, { desc = "FZF Live Grep" })
+
+-- Extra: <C-b> to search open Buffers (very useful!)
+map("n", "<leader>b", function()
+	fzf_lua.buffers()
+end, { desc = "FZF Find Buffers" })

@@ -8,6 +8,7 @@ local opts = { silent = true, noremap = true, expr = true, replace_keycodes = fa
 -- Editors
 map("n", "<C-q>", ":q<CR>", opt)
 map("n", "<C-s>", ":w<CR>", opt)
+map("n", "<leader>w", ":bdelete<CR>", opt)
 map("n", "<C-j>", "5j", opt)
 map("n", "<C-k>", "5k", opt)
 -- Move selected words
@@ -94,33 +95,5 @@ map("n", "<A-w>", ":Bdelete!<CR>", opt)
 --map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)      --- close the right tab
 --map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)     --- close the left tab
 --map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)     --- close the selected tab
-
--- Telescope
-map("n", "<C-p>", ":Telescope find_files<CR>", opt)
-map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
-pluginKeys.telescopeList = {
-	i = {
-		-- move vertically
-		--["<C-j>"] = "move_selection_next",
-		--["<C-k>"] = "move_selection_previous",
-		--["<Down>"] = "move_selection_next",
-		--["<Up>"] = "move_selection_previous",
-		-- history
-		["<C-n>"] = "cycle_history_next",
-		["<C-p>"] = "cycle_history_prev",
-		-- close the window
-		["<C-c>"] = "close",
-		-- sroll the preview window
-		["<C-u>"] = "preview_scrolling_up",
-		["<C-d>"] = "preview_scrolling_down",
-	},
-}
-
--- Floaterm
---vim.g.floaterm_keymap_new = "<leader>tt"
-vim.g.floaterm_keymap_toggle = "<leader>t"
-vim.g.floaterm_keymap_kill = "<leader>kt"
-vim.g.floaterm_width = 0.7
-vim.g.floaterm_height = 0.7
 
 return pluginKeys
