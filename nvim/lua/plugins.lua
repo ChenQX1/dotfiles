@@ -24,6 +24,13 @@ packer.startup({
 		--use("preservim/nerdcommenter")
 		use({ "ibhagwan/fzf-lua", requires = { "nvim-tree/nvim-web-devicons" } })
 		use("antoinemadec/coc-fzf")
+		use({
+			"nvim-treesitter/nvim-treesitter",
+			run = function()
+				local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+				ts_update()
+			end,
+		})
 	end,
 	config = {
 		max_jobs = 16,

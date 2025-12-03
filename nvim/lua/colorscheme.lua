@@ -11,3 +11,4 @@ vim.g.everforest_transparent_background = 2
 vim.g.everforest_sign_column_background = "grey"
 vim.g.everforest_ui_contrast = "high"
 vim.g.everforest_disable_terminal_colors = 1
+vim.g.everforest_enable_italic = 1
